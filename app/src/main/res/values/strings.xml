@@ -52,6 +52,7 @@
 
     <string name="action_download">Download</string>
     <string name="action_refresh">Refresh</string>
+    <string name="action_filter_out">Hide subreddit</string>
     <string name="action_add_comment">Add a comment</string>
     <string name="action_save_post">Save post</string>
     <string name="action_view_crosspost_parent">View crosspost parent</string>

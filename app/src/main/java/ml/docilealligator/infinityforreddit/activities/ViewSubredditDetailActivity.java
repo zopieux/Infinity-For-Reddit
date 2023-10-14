@@ -121,6 +121,7 @@ import ml.docilealligator.infinityforreddit.message.ReadMessage;
 import ml.docilealligator.infinityforreddit.multireddit.MultiReddit;
 import ml.docilealligator.infinityforreddit.post.Post;
 import ml.docilealligator.infinityforreddit.post.PostPagingSource;
+import ml.docilealligator.infinityforreddit.postfilter.PostFilter;
 import ml.docilealligator.infinityforreddit.readpost.InsertReadPost;
 import ml.docilealligator.infinityforreddit.subreddit.FetchSubredditData;
 import ml.docilealligator.infinityforreddit.subreddit.ParseSubredditData;
@@ -1138,6 +1139,16 @@ public class ViewSubredditDetailActivity extends BaseActivity implements SortTyp
             return true;
         } else if (itemId == R.id.action_sort_view_subreddit_detail_activity) {
             displaySortTypeBottomSheetFragment();
+            return true;
+        } else if (itemId == R.id.action_filter_out_view_subreddit_detail_activity) {
+            mExecutor.execute(() -> {
+                PostFilter filter = mRedditDataRoomDatabase.postFilterDao().getPostFilter("Default");
+                if (filter != null) {
+                    filter.addExcludeSubreddit(subredditName);
+                    mRedditDataRoomDatabase.postFilterDao().insert(filter);
+                }
+            });
+            onBackPressed();
             return true;
         } else if (itemId == R.id.action_search_view_subreddit_detail_activity) {
             Intent intent = new Intent(this, SearchActivity.class);

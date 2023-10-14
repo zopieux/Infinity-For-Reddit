@@ -18,6 +18,12 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_filter_out_view_subreddit_detail_activity"
+        android:orderInCategory="3"
+        android:title="@string/action_filter_out"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_refresh_view_subreddit_detail_activity"
         android:orderInCategory="3"
         android:title="@string/action_refresh"

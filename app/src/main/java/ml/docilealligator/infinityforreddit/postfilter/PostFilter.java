@@ -1,5 +1,6 @@
 package ml.docilealligator.infinityforreddit.postfilter;
 
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -9,10 +10,13 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import ml.docilealligator.infinityforreddit.post.Post;
 
@@ -281,6 +285,12 @@ public class PostFilter implements Parcelable {
         }
 
         return true;
+    }
+
+    public void addExcludeSubreddit(String subreddit) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            excludeSubreddits = Stream.concat(Arrays.stream(excludeSubreddits.split(",")), Stream.of(subreddit)).sorted().distinct().collect(Collectors.joining(","));
+        }
     }
 
     public static PostFilter mergePostFilter(List<PostFilter> postFilterList) {
