@@ -664,10 +664,10 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
 
             if (mAccessToken != null) {
                 if (mPost.isSaved()) {
-                    saveItem.setVisible(true);
+//                    saveItem.setVisible(true);
                     saveItem.setIcon(mSavedIcon);
                 } else {
-                    saveItem.setVisible(true);
+//                    saveItem.setVisible(true);
                     saveItem.setIcon(mUnsavedIcon);
                 }
 
@@ -679,7 +679,7 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
                     Utils.setTitleWithCustomFontToMenuItem(activity.typeface, hideItem, activity.getString(R.string.action_hide_post));
                 }
             } else {
-                saveItem.setVisible(false);
+//                saveItem.setVisible(false);
                 hideItem.setVisible(false);
             }
 

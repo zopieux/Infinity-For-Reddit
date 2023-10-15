@@ -469,10 +469,10 @@ public class CommentsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
                 ((CommentBaseViewHolder) holder).commentIndentationView.setShowOnlyOneDivider(mShowOnlyOneCommentLevelIndicator);
                 ((CommentBaseViewHolder) holder).commentIndentationView.setLevelAndColors(comment.getDepth(), verticalBlockColors);
                 if (comment.getDepth() >= mDepthThreshold) {
-                    ((CommentBaseViewHolder) holder).saveButton.setVisibility(View.GONE);
+//                    ((CommentBaseViewHolder) holder).saveButton.setVisibility(View.GONE);
                     ((CommentBaseViewHolder) holder).replyButton.setVisibility(View.GONE);
                 } else {
-                    ((CommentBaseViewHolder) holder).saveButton.setVisibility(View.VISIBLE);
+//                    ((CommentBaseViewHolder) holder).saveButton.setVisibility(View.VISIBLE);
                     ((CommentBaseViewHolder) holder).replyButton.setVisibility(View.VISIBLE);
                 }
 
@@ -1227,6 +1227,7 @@ public class CommentsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
             this.placeholder = placeholder;
             this.moreButton = moreButton;
             this.saveButton = saveButton;
+            this.saveButton.setVisibility(View.GONE);
             this.expandButton = expandButton;
             this.replyButton = replyButton;
             this.commentIndentationView = commentIndentationView;

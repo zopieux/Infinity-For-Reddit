@@ -284,6 +284,7 @@
             android:id="@+id/save_button_item_post_card_2_gallery_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             app:strokeWidth="0dp"
             app:iconSize="24dp"
             app:layout_constraintHorizontal_bias="1"

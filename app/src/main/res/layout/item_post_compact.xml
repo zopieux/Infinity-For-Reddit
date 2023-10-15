@@ -332,6 +332,7 @@
             android:layout_height="wrap_content"
             app:strokeWidth="0dp"
             app:iconSize="24dp"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/vote_button_toggle_item_post_compact"

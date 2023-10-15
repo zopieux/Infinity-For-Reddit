@@ -137,7 +137,7 @@ public class CommentMoreBottomSheetFragment extends LandscapeExpandedRoundedBott
 
         if (showReplyAndSaveOption) {
             replyTextView.setVisibility(View.VISIBLE);
-            saveTextView.setVisibility(View.VISIBLE);
+            saveTextView.setVisibility(View.GONE);
             if (comment.isSaved()) {
                 saveTextView.setCompoundDrawablesWithIntrinsicBounds(ContextCompat.getDrawable(activity, R.drawable.ic_bookmark_24dp), null, null, null);
                 saveTextView.setText(R.string.unsave_comment);

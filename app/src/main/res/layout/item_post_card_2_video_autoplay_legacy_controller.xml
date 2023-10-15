@@ -283,16 +283,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/save_button_item_post_card_2_video_autoplay"
+            style="?attr/materialIconButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:strokeWidth="0dp"
+            android:visibility="gone"
             app:iconSize="24dp"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/comments_count_button_item_post_card_2_video_autoplay"
             app:layout_constraintEnd_toStartOf="@id/share_button_item_post_card_2_video_autoplay"
-            style="?attr/materialIconButtonOutlinedStyle" />
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/comments_count_button_item_post_card_2_video_autoplay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/share_button_item_post_card_2_video_autoplay"

@@ -27,13 +27,18 @@ android {
             signingConfig signingConfigs.debug
             initWith buildTypes.release
             zipAlignEnabled true
-            minifyEnabled true
-            shrinkResources true
+//            minifyEnabled true
+//            shrinkResources true
             // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             applicationIdSuffix '.debug'
             versionNameSuffix ' (DEBUG)'
+            signingConfig signingConfigs.debug
+            initWith buildTypes.release
+            zipAlignEnabled true
+            minifyEnabled true
+            //shrinkResources true
         }
     }
     compileOptions {
